@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="#FFFAFA"
+    android:layout_height="match_parent"
+    tools:context=".Activities.CreateAccountActivity">
+
+    <TextView
+        android:id="@+id/createAccountTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="24dp"
+        android:fontFamily="@font/antic_slab"
+        android:text="Create A New Account"
+        android:textAlignment="textStart"
+        android:textColor="@android:color/background_dark"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/emailRegInput"
+
+        android:layout_marginEnd="24dp"
+        android:layout_marginStart="24dp"
+        android:ems="10"
+        android:hint="Email"
+        android:layout_width = "match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="144dp"
+        android:layout_centerHorizontal="true"
+        android:textCursorDrawable="@layout/color_cursor"
+        android:background="@layout/et"
+        android:theme="@style/EditTextStyle"
+        android:textAlignment="center"
+        android:inputType="textEmailAddress"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/createAccountTitle" />
+
+    <EditText
+        android:id="@+id/passwordRegInput"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="228dp"
+        android:layout_centerHorizontal="true"
+        android:ems="10"
+        android:hint="@string/password"
+        android:inputType="textPassword"
+        android:textAlignment="center"
+        android:textCursorDrawable="@layout/color_cursor"
+        android:background="@layout/et"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/emailRegInput" />
+
+    <EditText
+        android:id="@+id/reenterPassword"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="312dp"
+        android:ems="10"
+        android:hint="Re-enter Password"
+        android:inputType="textPassword"
+        android:textCursorDrawable="@layout/color_cursor"
+        android:background="@layout/et"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/passwordRegInput" />
+
+    <TextView
+        android:id="@+id/submitButton"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="500dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="105dp"
+        android:background="#00BFFF"
+        android:fontFamily="sans-serif"
+        android:text="SUBMIT"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/reenterPassword" />
+
+</RelativeLayout>

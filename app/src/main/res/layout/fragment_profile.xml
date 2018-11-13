@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+    android:background="#FFFAFA"
+android:layout_height="match_parent"
+tools:context=".Fragments.ProfileFragment">
+
+    <TextView
+        android:id="@+id/userNickname"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="96dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="96dp"
+        android:fontFamily="@font/antic_slab"
+        android:text="Nickname"
+        android:textAlignment="center"
+        android:textColor="@android:color/background_dark"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/userAvatar"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:src="@drawable/avatarpink"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/userNickname" />
+
+    <ImageView
+        android:id="@+id/settingIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:layout_marginEnd="24dp"
+        android:src="@drawable/setting_icon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/userDescription"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="72dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="72dp"
+        android:text="Where there is a will, there is a way!"
+        android:textAlignment="center"
+        android:textColor="@android:color/background_dark"
+        android:textSize="18sp"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/userAvatar" />
+
+    <View
+        android:id="@+id/divider9"
+        android:layout_width="395dp"
+        android:layout_height="2dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:background="@android:color/darker_gray"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/userDescription" />
+
+    <ScrollView
+        android:id="@+id/displayUserDetail"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="48dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/divider9">
+
+        <TableLayout
+            android:id="@+id/tableOfDetail"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TableRow>
+
+                <RelativeLayout>
+
+                    <ImageView
+                        android:id="@+id/gotoA"
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:layout_marginStart="18dp"
+                        android:layout_marginTop="14dp"
+                        android:src="@drawable/friend" />
+
+                    <TextView
+                        android:id="@+id/friendsList"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="18dp"
+                        android:layout_marginTop="18dp"
+                        android:layout_toRightOf="@id/gotoA"
+                        android:fontFamily="sans-serif"
+                        android:text="@string/friends"
+                        android:textAlignment="textStart"
+                        android:textColor="@android:color/background_dark"
+                        android:textSize="20sp" />
+
+                    <View
+                        android:id="@+id/divider10"
+                        android:layout_width="395dp"
+                        android:layout_height="2dp"
+                        android:layout_below="@id/friendsList"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="14dp"
+                        android:layout_marginEnd="8dp"
+                        android:background="@android:color/darker_gray"
+                        android:visibility="visible" />
+                </RelativeLayout>
+            </TableRow>
+
+            <TableRow>
+
+                <RelativeLayout>
+
+                    <ImageView
+                        android:id="@+id/gotoB"
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:layout_marginStart="18dp"
+                        android:layout_marginTop="14dp"
+                        android:src="@drawable/thought" />
+
+                    <TextView
+                        android:id="@+id/myThoughtsList"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="18dp"
+                        android:layout_marginTop="18dp"
+                        android:layout_toRightOf="@id/gotoB"
+                        android:fontFamily="sans-serif"
+                        android:text="@string/mythoughts"
+                        android:textAlignment="textStart"
+                        android:textColor="@android:color/background_dark"
+                        android:textSize="20sp" />
+
+                    <View
+                        android:id="@+id/divider11"
+                        android:layout_width="395dp"
+                        android:layout_height="2dp"
+                        android:layout_below="@id/myThoughtsList"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="14dp"
+                        android:layout_marginEnd="8dp"
+                        android:background="@android:color/darker_gray"
+                        android:visibility="visible" />
+                </RelativeLayout>
+            </TableRow>
+
+            <TableRow>
+
+                <RelativeLayout>
+
+                    <ImageView
+                        android:id="@+id/gotoC"
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:layout_marginStart="18dp"
+                        android:layout_marginTop="14dp"
+                        android:src="@drawable/review" />
+
+                    <TextView
+                        android:id="@+id/myReviewList"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="18dp"
+                        android:layout_marginTop="18dp"
+                        android:layout_toRightOf="@id/gotoC"
+                        android:fontFamily="sans-serif"
+                        android:text="@string/myreviews"
+                        android:textAlignment="textStart"
+                        android:textColor="@android:color/background_dark"
+                        android:textSize="20sp" />
+
+                    <View
+                        android:id="@+id/divider12"
+                        android:layout_width="395dp"
+                        android:layout_height="2dp"
+                        android:layout_below="@id/myReviewList"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="14dp"
+                        android:layout_marginEnd="8dp"
+                        android:background="@android:color/darker_gray"
+                        android:visibility="visible" />
+                </RelativeLayout>
+            </TableRow>
+
+            <TableRow>
+
+                <RelativeLayout>
+
+                    <ImageView
+                        android:id="@+id/gotoD"
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:layout_marginStart="18dp"
+                        android:layout_marginTop="14dp"
+                        android:src="@drawable/shelf" />
+
+                    <TextView
+                        android:id="@+id/myBookShelf"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="18dp"
+                        android:layout_marginTop="18dp"
+                        android:layout_toRightOf="@id/gotoD"
+                        android:fontFamily="sans-serif"
+                        android:text="@string/mybookshelf"
+                        android:textAlignment="textStart"
+                        android:textColor="@android:color/background_dark"
+                        android:textSize="20sp" />
+
+                    <View
+                        android:id="@+id/divider13"
+                        android:layout_width="395dp"
+                        android:layout_height="2dp"
+                        android:layout_below="@id/myBookShelf"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="14dp"
+                        android:layout_marginEnd="8dp"
+                        android:background="@android:color/darker_gray"
+                        android:visibility="visible" />
+                </RelativeLayout>
+            </TableRow>
+
+            <TableRow>
+
+                <RelativeLayout>
+
+                    <ImageView
+                        android:id="@+id/gotoE"
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:layout_marginStart="18dp"
+                        android:layout_marginTop="14dp"
+                        android:src="@drawable/currentreading" />
+
+                    <TextView
+                        android:id="@+id/myCurrentReading"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="18dp"
+                        android:layout_marginTop="18dp"
+                        android:layout_toRightOf="@id/gotoE"
+                        android:fontFamily="sans-serif"
+                        android:text="@string/currentlyreading"
+                        android:textAlignment="textStart"
+                        android:textColor="@android:color/background_dark"
+                        android:textSize="20sp" />
+
+                    <View
+                        android:id="@+id/divider14"
+                        android:layout_width="395dp"
+                        android:layout_height="2dp"
+                        android:layout_below="@id/myCurrentReading"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="14dp"
+                        android:layout_marginEnd="8dp"
+                        android:background="@android:color/darker_gray"
+                        android:visibility="visible" />
+                </RelativeLayout>
+            </TableRow>
+        </TableLayout>
+    </ScrollView>
+
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,471 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFAFA"
+    tools:context=".Activities.BookDetailActivity">
+
+    <ImageView
+        android:id="@+id/goBackForDetailPage"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:src="@drawable/back_icon"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/bookName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/antic_slab"
+        android:text="BookName"
+        android:textColor="@android:color/background_dark"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/goBackForDetailPage"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/viewNumImage"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="24dp"
+        android:src="@drawable/people_icon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/viewNumber"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="216"
+        android:textAlignment="center"
+        android:textColor="@android:color/background_dark"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/viewNumImage" />
+
+    <ImageView
+        android:id="@+id/bookCover"
+        android:layout_width="131dp"
+        android:layout_height="109dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="36dp"
+        android:src="@drawable/book_icon"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bookName" />
+
+    <TextView
+        android:id="@+id/descriptionText"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="12dp"
+        android:text="Discription of the book"
+        android:textColor="@android:color/background_dark"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toTopOf="@+id/commentIcon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.377"
+        app:layout_constraintStart_toEndOf="@+id/bookCover"
+        app:layout_constraintTop_toBottomOf="@+id/viewNumber" />
+
+    <RatingBar
+        android:id="@+id/mainRatingBar"
+        style="?android:attr/ratingBarStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="18dp"
+        android:layout_marginBottom="18dp"
+        android:isIndicator="false"
+        android:numStars="5"
+        android:rating="3"
+        android:scaleX="1.7"
+        android:scaleY="1.7"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bookCover" />
+
+    <TextView
+        android:id="@+id/rateText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="72dp"
+        android:layout_marginTop="14dp"
+        android:fontFamily="sans-serif"
+        android:text="@string/ratetext"
+        android:textColor="@android:color/background_dark"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mainRatingBar" />
+
+    <ImageView
+        android:id="@+id/commentIcon"
+        android:layout_width="52dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/comment_icon"
+        app:layout_constraintStart_toEndOf="@+id/mainRatingBar"
+        app:layout_constraintTop_toBottomOf="@+id/bookCover" />
+
+    <TextView
+        android:id="@+id/commentText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="70dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="20dp"
+        android:fontFamily="sans-serif"
+        android:text="@string/commenttext"
+        android:textColor="@android:color/background_dark"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/displayComment"
+        app:layout_constraintStart_toEndOf="@+id/rateText"
+        app:layout_constraintTop_toBottomOf="@+id/commentIcon" />
+
+    <ImageView
+        android:id="@+id/contentIcon"
+        android:layout_width="30dp"
+        android:layout_height="28dp"
+        android:layout_marginTop="14dp"
+        android:layout_marginEnd="60dp"
+        android:src="@drawable/content_icon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/descriptionText" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="9dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="20dp"
+        android:fontFamily="sans-serif"
+        android:text="@string/contenttext"
+        android:textColor="@android:color/background_dark"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/displayComment"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/commentText"
+        app:layout_constraintTop_toBottomOf="@+id/contentIcon" />
+
+    <View
+        android:id="@+id/divider4"
+        android:layout_width="395dp"
+        android:layout_height="1dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="8dp"
+        android:background="@android:color/darker_gray"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/commentText" />
+
+    <LinearLayout
+        android:id="@+id/bottomButtons"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="24dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:id="@+id/readNowButton"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#99CCFF"
+            android:fontFamily="sans-serif"
+            android:text="Read"
+            android:textAlignment="center"
+            android:textColor="@android:color/background_dark"
+            android:textSize="22sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.05"/>
+
+        <TextView
+            android:id="@+id/addToShelfButton"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#99CCFF"
+            android:fontFamily="sans-serif"
+            android:text="Add"
+            android:textAlignment="center"
+            android:textColor="@android:color/background_dark"
+            android:textSize="22sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/displayComment"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="24dp"
+        app:layout_constraintBottom_toTopOf="@+id/bottomButtons"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rateText"
+        app:layout_constraintVertical_bias="0.0">
+
+        <TableLayout
+            android:id="@+id/tableOfComment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:shrinkColumns="0">
+
+            <TableRow>
+
+                <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/commentuserA"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginTop="8dp"
+                        android:text="Clivian"
+                        android:textColor="@android:color/background_dark"
+                        android:textSize="16sp" />
+
+                    <RatingBar
+                        android:id="@+id/RatingBarA"
+                        style="?android:attr/ratingBarStyleSmall"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="24dp"
+                        android:layout_marginStart="36dp"
+                        android:layout_marginTop="12dp"
+                        android:layout_toRightOf="@id/commentuserA"
+                        android:isIndicator="false"
+                        android:numStars="5"
+                        android:rating="3.5"
+                        android:scaleX="1.4"
+                        android:scaleY="1.4" />
+
+                    <TextView
+                        android:id="@+id/commentcontentA"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/commentuserA"
+                        android:layout_marginHorizontal="24dp"
+                        android:layout_marginTop="6dp"
+                        android:text="The book is really interesting, it remains me of my childhood, I even want to read this book for the second time."
+                        android:textColor="@android:color/background_dark"
+                        android:textSize="15sp" />
+
+                    <View
+                        android:id="@+id/divider5"
+                        android:layout_width="395dp"
+                        android:layout_height="2dp"
+                        android:layout_below="@id/commentcontentA"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="9dp"
+                        android:background="@android:color/darker_gray"
+                        android:visibility="visible" />
+                </RelativeLayout>
+            </TableRow>
+
+            <TableRow>
+
+                <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/commentuserB"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginTop="8dp"
+                        android:text="Clive"
+                        android:textColor="@android:color/background_dark"
+                        android:textSize="16sp" />
+
+                    <RatingBar
+                        android:id="@+id/RatingBarB"
+                        style="?android:attr/ratingBarStyleSmall"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="36dp"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginEnd="24dp"
+                        android:layout_toRightOf="@id/commentuserB"
+                        android:isIndicator="false"
+                        android:numStars="5"
+                        android:rating="0.5"
+                        android:scaleX="1.4"
+                        android:scaleY="1.4" />
+
+                    <TextView
+                        android:id="@+id/commentcontentB"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/commentuserB"
+                        android:layout_marginHorizontal="24dp"
+                        android:layout_marginTop="6dp"
+                        android:text="A terrible book, do not read it, period."
+                        android:textColor="@android:color/black"
+                        android:textSize="15sp" />
+
+                    <View
+                        android:id="@+id/divider6"
+                        android:layout_width="395dp"
+                        android:layout_height="2dp"
+                        android:layout_below="@id/commentcontentB"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="9dp"
+                        android:layout_marginEnd="8dp"
+                        android:background="@android:color/darker_gray"
+                        android:visibility="visible" />
+
+                </RelativeLayout>
+            </TableRow>
+
+            <TableRow>
+
+                <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/commentuserC"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginTop="8dp"
+                        android:text="Clivia"
+                        android:textColor="@android:color/background_dark"
+                        android:textSize="16sp" />
+
+                    <RatingBar
+                        android:id="@+id/RatingBarC"
+                        style="?android:attr/ratingBarStyleSmall"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="36dp"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginEnd="24dp"
+                        android:layout_toRightOf="@id/commentuserC"
+                        android:isIndicator="false"
+                        android:numStars="5"
+                        android:rating="1.5"
+                        android:scaleX="1.4"
+                        android:scaleY="1.4" />
+
+                    <TextView
+                        android:id="@+id/commentcontentC"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/commentuserC"
+                        android:layout_marginHorizontal="24dp"
+                        android:layout_marginTop="6dp"
+                        android:text="I would say that this book is quite boring, read it if you want to waste your time."
+                        android:textColor="@android:color/background_dark"
+                        android:textSize="15sp" />
+
+                    <View
+                        android:id="@+id/divider7"
+                        android:layout_width="395dp"
+                        android:layout_height="2dp"
+                        android:layout_below="@id/commentcontentC"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="9dp"
+                        android:layout_marginEnd="8dp"
+                        android:background="@android:color/darker_gray"
+                        android:visibility="visible" />
+
+                </RelativeLayout>
+            </TableRow>
+
+            <TableRow>
+
+                <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/commentuserD"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginTop="8dp"
+                        android:text="Clivianel"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp" />
+
+                    <RatingBar
+                        android:id="@+id/RatingBarD"
+                        style="?android:attr/ratingBarStyleSmall"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="36dp"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginEnd="24dp"
+                        android:layout_toRightOf="@id/commentuserD"
+                        android:isIndicator="false"
+                        android:numStars="5"
+                        android:rating="4.5"
+                        android:scaleX="1.4"
+                        android:scaleY="1.4" />
+
+                    <TextView
+                        android:id="@+id/commentcontentD"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/commentuserD"
+                        android:layout_marginHorizontal="24dp"
+                        android:layout_marginTop="6dp"
+                        android:text="This book is really a well-written book, definitely worth a try! I really enjoy @string/reading it."
+                        android:textColor="@android:color/black"
+                        android:textSize="15sp" />
+
+                    <View
+                        android:id="@+id/divider8"
+                        android:layout_width="395dp"
+                        android:layout_height="2dp"
+                        android:layout_below="@id/commentcontentD"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="9dp"
+                        android:layout_marginEnd="8dp"
+                        android:background="@android:color/darker_gray"
+                        android:visibility="visible" />
+
+                </RelativeLayout>
+            </TableRow>
+        </TableLayout>
+    </ScrollView>
+
+
+</android.support.constraint.ConstraintLayout>

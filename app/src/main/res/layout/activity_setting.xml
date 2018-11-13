@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="#FFFAFA"
+    android:layout_height="match_parent"
+    tools:context=".Activities.SettingActivity">
+
+    <ImageView
+        android:id="@+id/goBackForSetting"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:src="@drawable/back_icon"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/settingText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="22dp"
+        android:fontFamily="@font/antic_slab"
+        android:text="@string/setting"
+        android:textColor="@android:color/background_dark"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/goBackForSetting"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/divider15"
+        android:layout_width="395dp"
+        android:layout_height="2dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:background="@android:color/darker_gray"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/settingText" />
+
+    <ScrollView
+        android:id="@+id/displaySetting"
+        android:layout_width="0dp"
+        android:layout_height="403dp"
+        app:layout_constraintBottom_toTopOf="@+id/logout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/divider15"
+        app:layout_constraintVertical_bias="0.0">
+
+        <TableLayout
+            android:id="@+id/tableOfSetting"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TableRow>
+
+                <RelativeLayout>
+
+                    <ImageView
+                        android:id="@+id/goto1"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginStart="18dp"
+                        android:layout_marginTop="22dp"
+                        android:src="@drawable/goto_icon" />
+
+                    <TextView
+                        android:id="@+id/general"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="18dp"
+                        android:layout_marginTop="18dp"
+                        android:layout_toRightOf="@id/goto1"
+                        android:fontFamily="sans-serif"
+                        android:text="@string/general"
+                        android:textAlignment="textStart"
+                        android:textColor="@android:color/background_dark"
+                        android:textSize="20sp" />
+
+                    <View
+                        android:id="@+id/divider16"
+                        android:layout_width="395dp"
+                        android:layout_height="2dp"
+                        android:layout_below="@id/general"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="14dp"
+                        android:background="@android:color/darker_gray"
+                        android:visibility="visible" />
+                </RelativeLayout>
+            </TableRow>
+
+            <TableRow>
+
+                <RelativeLayout>
+
+                    <ImageView
+                        android:id="@+id/goto2"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginStart="18dp"
+                        android:layout_marginTop="22dp"
+                        android:src="@drawable/goto_icon" />
+
+                    <TextView
+                        android:id="@+id/reading"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="18dp"
+                        android:layout_marginTop="18dp"
+                        android:layout_toRightOf="@id/goto2"
+                        android:fontFamily="sans-serif"
+                        android:text="@string/reading"
+                        android:textAlignment="textStart"
+                        android:textColor="@android:color/background_dark"
+                        android:textSize="20sp" />
+
+                    <View
+                        android:id="@+id/divider17"
+                        android:layout_width="395dp"
+                        android:layout_height="2dp"
+                        android:layout_below="@id/reading"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="14dp"
+                        android:background="@android:color/darker_gray"
+                        android:visibility="visible" />
+                </RelativeLayout>
+            </TableRow>
+
+            <TableRow>
+
+                <RelativeLayout>
+
+                    <ImageView
+                        android:id="@+id/goto3"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginStart="18dp"
+                        android:layout_marginTop="22dp"
+                        android:src="@drawable/goto_icon" />
+
+                    <TextView
+                        android:id="@+id/friendsInSetting"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="18dp"
+                        android:layout_marginTop="18dp"
+                        android:layout_toRightOf="@id/goto3"
+                        android:fontFamily="sans-serif"
+                        android:text="@string/friendsinsetting"
+                        android:textAlignment="textStart"
+                        android:textColor="@android:color/background_dark"
+                        android:textSize="20sp" />
+
+                    <View
+                        android:id="@+id/divider18"
+                        android:layout_width="395dp"
+                        android:layout_height="2dp"
+                        android:layout_below="@id/friendsInSetting"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="14dp"
+                        android:background="@android:color/darker_gray"
+                        android:visibility="visible" />
+                </RelativeLayout>
+            </TableRow>
+
+            <TableRow>
+
+                <RelativeLayout>
+
+                    <ImageView
+                        android:id="@+id/goto4"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginStart="18dp"
+                        android:layout_marginTop="22dp"
+                        android:src="@drawable/goto_icon" />
+
+                    <TextView
+                        android:id="@+id/thoughsinsetting"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="18dp"
+                        android:layout_marginTop="18dp"
+                        android:layout_toRightOf="@id/goto4"
+                        android:fontFamily="sans-serif"
+                        android:text="@string/thoughtsinsetting"
+                        android:textAlignment="textStart"
+                        android:textColor="@android:color/background_dark"
+                        android:textSize="20sp" />
+
+                    <View
+                        android:id="@+id/divider19"
+                        android:layout_width="395dp"
+                        android:layout_height="2dp"
+                        android:layout_below="@id/thoughsinsetting"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="14dp"
+                        android:background="@android:color/darker_gray"
+                        android:visibility="visible" />
+                </RelativeLayout>
+            </TableRow>
+
+            <TableRow>
+
+                <RelativeLayout>
+
+                    <ImageView
+                        android:id="@+id/goto5"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginStart="18dp"
+                        android:layout_marginTop="22dp"
+                        android:src="@drawable/goto_icon" />
+
+                    <TextView
+                        android:id="@+id/language"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="18dp"
+                        android:layout_marginTop="18dp"
+                        android:layout_toRightOf="@id/goto5"
+                        android:fontFamily="sans-serif"
+                        android:text="@string/language"
+                        android:textAlignment="textStart"
+                        android:textColor="@android:color/background_dark"
+                        android:textSize="20sp" />
+
+                    <View
+                        android:id="@+id/divider20"
+                        android:layout_width="395dp"
+                        android:layout_height="2dp"
+                        android:layout_below="@id/language"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="14dp"
+                        android:background="@android:color/darker_gray"
+                        android:visibility="visible" />
+                </RelativeLayout>
+            </TableRow>
+
+            <TableRow>
+
+                <RelativeLayout>
+
+                    <ImageView
+                        android:id="@+id/goto6"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginStart="18dp"
+                        android:layout_marginTop="22dp"
+                        android:src="@drawable/goto_icon" />
+
+                    <TextView
+                        android:id="@+id/helpinsetting"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="18dp"
+                        android:layout_marginTop="18dp"
+                        android:layout_toRightOf="@id/goto6"
+                        android:fontFamily="sans-serif"
+                        android:text="@string/helpinsetting"
+                        android:textAlignment="textStart"
+                        android:textColor="@android:color/background_dark"
+                        android:textSize="20sp" />
+
+                    <View
+                        android:id="@+id/divider21"
+                        android:layout_width="395dp"
+                        android:layout_height="2dp"
+                        android:layout_below="@id/helpinsetting"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="14dp"
+                        android:background="@android:color/darker_gray"
+                        android:visibility="visible" />
+                </RelativeLayout>
+            </TableRow>
+        </TableLayout>
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/logout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="148dp"
+        android:layout_marginEnd="48dp"
+        android:layout_marginStart="48dp"
+        android:background="#FFFAFA"
+        android:fontFamily="sans-serif"
+        android:text="Log Out"
+        android:textAlignment="center"
+        android:textColor="@android:color/background_dark"
+        android:textSize="28sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+</android.support.constraint.ConstraintLayout>

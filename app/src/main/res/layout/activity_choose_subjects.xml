@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFAFA"
+    tools:context=".Activities.ChooseSubjectsActivity">
+
+    <ScrollView
+        android:id="@+id/displaySubjects"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="50dp"
+        android:background="#AAAAAA"
+        app:layout_constraintBottom_toTopOf="@+id/continueButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/chooseSubjectsTitle"
+        app:layout_constraintVertical_bias="1.0">
+
+        <TableLayout
+            android:id="@+id/tableOfSubjects"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TableRow>
+
+                <TextView android:height="2sp" />
+            </TableRow>
+
+            <TableRow>
+
+                <Button
+                    android:id="@+id/leftst"
+                    android:layout_marginBottom="2sp"
+                    android:layout_weight="1"
+                    android:background="#FFFFFF"
+                    android:padding="23sp"
+                    android:text="Under One Sky"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/black"
+                    android:textSize="15sp" />
+            </TableRow>
+
+            <TableRow>
+
+                <Button
+                    android:id="@+id/rightst"
+                    android:layout_marginBottom="2sp"
+                    android:layout_weight="1"
+                    android:background="#FFFFFF"
+                    android:padding="23sp"
+                    android:text="Ties That Bind"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/black"
+                    android:textSize="15sp" />
+
+            </TableRow>
+
+            <TableRow>
+
+                <Button
+                    android:id="@+id/lefta"
+                    android:layout_marginBottom="2sp"
+                    android:layout_weight="1"
+                    android:background="#FFFFFF"
+                    android:padding="23sp"
+                    android:text="Transition"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/black"
+                    android:textSize="15sp" />
+            </TableRow>
+
+            <TableRow>
+
+                <Button
+                    android:id="@+id/righta"
+                    android:layout_marginBottom="2sp"
+                    android:layout_weight="1"
+                    android:background="#FFFFFF"
+                    android:padding="23sp"
+                    android:text="Roads Less Travelled"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/black"
+                    android:textSize="15sp" />
+
+            </TableRow>
+
+            <TableRow>
+
+                <Button
+                    android:id="@+id/leftc"
+                    android:layout_marginBottom="2sp"
+                    android:layout_weight="1"
+                    android:background="#FFFFFF"
+                    android:padding="23sp"
+                    android:text="Bridges"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/black"
+                    android:textSize="15sp" />
+            </TableRow>
+
+            <TableRow>
+
+                <Button
+                    android:id="@+id/rightc"
+                    android:layout_marginBottom="2sp"
+                    android:layout_weight="1"
+                    android:background="#FFFFFF"
+                    android:padding="23sp"
+                    android:text="Tales from East Asia"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/black"
+                    android:textSize="15sp" />
+
+            </TableRow>
+
+        </TableLayout>
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/continueButton"
+        android:layout_width="0dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="42dp"
+        android:background="#00BFFF"
+        android:fontFamily="sans-serif"
+        android:text="@string/startapp"
+        android:textColor="#FFFFFF"
+        android:textAlignment="center"
+        android:textSize="28sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/chooseSubjectsTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="20dp"
+        android:fontFamily="@font/antic_slab"
+        android:text="@string/choosesubjects"
+        android:textColor="@android:color/background_dark"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</android.support.constraint.ConstraintLayout>

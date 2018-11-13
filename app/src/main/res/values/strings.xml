@@ -1,0 +1,90 @@
+<resources>
+    <drawable name="clr_normal">#ff9900</drawable>
+    <drawable name="clr_pressed">#aa3300</drawable>
+    <string name="facebook_app_id">251605235516986</string> <string name="fb_login_protocol_scheme">fb251605235516986</string>
+
+
+    <string name="font">sans-serif</string>
+    <string name="title_activity_navigation"></string>
+    //strings for main
+    <string name="app_name">Light</string>
+    <string name="title_search">Search</string>
+    //also for fragment_search
+    <string name="title_shelf">Shelf</string>
+    <string name="title_thought">Thought</string>
+    <string name="title_profile">Profile</string>
+
+    //strings for loginActivity
+    <string name="email">Email address</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="staylogedin">Stay logged in</string>
+    <string name="forgetpassword"><u>Forget password</u></string>
+    <string name="createaccount"><u>Create account</u></string>
+    <string name="loginjoinwith">Log In &amp; Join with</string>
+    <string name="bottom">©5tar | Help</string>
+    <string name='emailsent'>The temporary password has been sent to your email.</string>
+
+    //strings for setProfileActivity
+    <string name="skip">Skip ></string>
+    <string name="nickname">Nickname</string>
+    <string name="discription">Description</string>
+    <string name="next">Next ></string>
+    <string name="setprofile">Please set up your profile:</string>
+
+    //strings for chooseSubjectActivity
+    <string name="startapp">Begin reading</string>
+    <string name="choosesubjects">Please choose the subject(s) you feel most interested in:</string>
+
+    //strings for createAccountActivity
+    <string name="creatingaccount">Creating account:</string>
+    <string name="submitaccountinfo">Submit</string>
+    <string name="reenterpassword">Re-enter password</string>
+
+    //strings for fragments on the main page
+    <string name="friends">Friends</string>
+    <string name="myreviews">My reviews</string>
+    <string name="mythoughts">My thoughts</string>
+    <string name="mybookshelf">My bookshelf</string>
+    <string name="currentlyreading">Currently reading</string>
+
+    //strings for bookDetailActivity
+    <string name="ratetext">Rate</string>
+    <string name="commenttext">Comment</string>
+    <string name="contenttext">Content</string>
+    <string name="readnowbutton">Read now</string>
+    <string name="addtoshelfbutton">Add to shelf</string>
+    <string name="alreadyaddedbutton">Already added</string>
+    //to be implemented
+
+    //strings for settingActivity
+    <string name="setting">Setting</string>
+    <string name="general">General</string>
+    <string name="reading">Reading</string>
+    <string name="friendsinsetting">Friends</string>
+    <string name="thoughtsinsetting">Thoughts</string>
+    <string name="language">Language</string>
+    <string name="helpinsetting">Help</string>
+    <string name="logouttext">Log out</string>
+
+    //strings for searchFragment
+    <string name="trendstext">Trends</string>
+    <string name="recommendationtext">Recommendations</string>
+    <string name="librarytext">To library</string>
+
+    //strings for library activity:
+    <string name="viewall">View all</string>
+
+    //strings for postActivity
+    <string name="post_title">Please enter your post title</string>
+    <string name="post_description">Please enter your 140-character post...</string>
+    <string name="submit">Submit</string>
+
+    //strings for blogRow
+    <string name="post_title_goes_here">Post Title</string>
+    <string name="post_desc_goes_here">Post Description</string>
+    <string name="uname">userName</string>
+
+
+
+</resources>
