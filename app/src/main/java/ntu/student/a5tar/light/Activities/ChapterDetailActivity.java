@@ -69,26 +69,20 @@ public class ChapterDetailActivity extends AppCompatActivity {
         for(int i=0;i<splitTitle.length;i++){
             storedTitle = storedTitle+splitTitle[i];
         }
-        // Download the book and save it  to the external storage of the user.
-//        DownloadManager.Request request = new DownloadManager.Request(Uri.parse(downloadUrl));
-//        request.setDestinationInExternalPublicDir("", storedTitle+".epub");
-//        DownloadManager downloadManager= (DownloadManager) context.getSystemService(Context.DOWNLOAD_SERVICE);
-//        downloadManager.enqueue(request);
+       //Download the book and save it  to the external storage of the user.
+       DownloadManager.Request request = new DownloadManager.Request(Uri.parse(downloadUrl));
+       request.setDestinationInExternalPublicDir("", storedTitle+".epub");
+       DownloadManager downloadManager= (DownloadManager) context.getSystemService(Context.DOWNLOAD_SERVICE);
+       downloadManager.enqueue(request);
 
-        // Get the book from the storage to read.
-//        final File file = new File(Environment.getExternalStorageDirectory()
-//                .getAbsolutePath(), storedTitle+".epub");
+        Get the book from the storage to read.
+       final File file = new File(Environment.getExternalStorageDirectory()
+               .getAbsolutePath(), storedTitle+".epub");
         String href = getIntent().getStringExtra("href");
         Log.i(TAG, "onCreate: href=" + href);
-        InputStream in;
+        InputStream in = new FileInputStream(file);;
         try {
             EpubReader reader = new EpubReader();
-            if(bookTitle.equals("No Looking Back")){
-                in = getAssets().open("No Looking Back.epub");
-            }
-            else{
-                in = getAssets().open("Lee.epub");
-            }
             Book book = reader.readEpub(in);
             Resource content = book.getContents().get(1);
             byte[] data = content.getData();
