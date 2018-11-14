@@ -3,6 +3,13 @@ An Android app for reading books and sharing thoughts on books.
 
 Created by Fu Mengyan, Han Simeng, Li Guanlong, Jeko Leonardo and Zhang Shengjing for CZ2006 group project. 
 
+# Functions
+
+Log In, Create Account, Personal Profile/
+Library, Trending, Recommendation/
+Detail, Content/
+Thoughts
+
 ![alt tag](https://github.com/ShirleyHan6/Light/blob/master/Screenshots/Login.png)
 ![alt tag](https://github.com/ShirleyHan6/Light/blob/master/Screenshots/CreateAccount.png)
 ![alt tag](https://github.com/ShirleyHan6/Light/blob/master/Screenshots/Profile.png)
